@@ -452,7 +452,7 @@ def tag_length_validator(value, context):
 
 def tag_name_validator(value, context):
 
-    tagname_match = re.compile('[\w \-.]*$', re.UNICODE)
+    tagname_match = re.compile('[\w \-.ก-๙]*$', re.UNICODE)
     if not tagname_match.match(value):
         raise Invalid(_('Tag "%s" can only contain alphanumeric '
                         'characters, spaces (" "), hyphens ("-"), '
